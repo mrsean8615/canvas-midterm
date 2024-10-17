@@ -9,6 +9,10 @@ export default function NavBar() {
             <ul>
                 <li>
                     <Link to='/homepage'>Home</Link>
+                    <Link to='/loginpage'>Login</Link>
+                    <Link to='/register'>Register</Link>
+
+
                 </li>
             </ul>
 
@@ -16,11 +20,3 @@ export default function NavBar() {
     )
 
 }
-
-// echo "# canvas-midterm" >> README.md
-// git init
-// git add README.md
-// git commit -m "first commit"
-// git branch -M main
-// git remote add origin https://github.com/mrsean8615/canvas-midterm.git
-// git push -u origin main
