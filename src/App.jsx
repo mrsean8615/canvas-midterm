@@ -1,5 +1,5 @@
 
-import NavBar from './components/layout/Navbar';
+import { DeleteContent } from './components/common/DeleteContent';
 import Router from './components/layout/Router';
 
 
@@ -10,6 +10,7 @@ function App() {
     <div>
       <Router />
       <p>heyo</p>
+      <DeleteContent />
     </div>
 
   )
