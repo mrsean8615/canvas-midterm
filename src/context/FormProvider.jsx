@@ -28,7 +28,8 @@ export const FormProvider = ({ onSubmit, children }) => {
             setErrors,
             handleSubmit
         }}> 
-        {children} 
+            {children} 
+
     
     </FormContext.Provider>)
 

@@ -2,8 +2,8 @@ import { useEffect, useState } from "react"
 import { useApi } from "../api/apiV3";
 
 
-export const fetchUsers = () => {
-    const usersApi = useApi('users')
+export const useFetchData = (type) => {
+    const usersApi = useApi(type)
     const [data, setData] = useState([]);
 
     useEffect(() => {

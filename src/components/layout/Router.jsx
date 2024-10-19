@@ -1,11 +1,13 @@
 import {BrowserRouter, Routes, Route } from 'react-router-dom';
-import HomePage from '../../pages/Homepage';
 import NavBar from './Navbar';
 import LoginPage from '../../pages/LoginPage';
 import Register from '../../pages/RegisterPage';
 import Announcements from '../../pages/Announcements';
-import Modules from '../../pages/Modules';
+import {Modules} from '../../pages/Modules';
 import ProfilePage from '../../pages/ProfilePage';
+import HomePage from '../../pages/HomePage';
+import { CreateAnnouncement } from '../../pages/CreateAnnouncement';
+import { CreateModules } from '../../pages/CreateModules';
 
 export default function Router() {
     return (
@@ -18,6 +20,9 @@ export default function Router() {
                 <Route path='/announcements' element={<Announcements />}/>
                 <Route path='/modules' element={<Modules />}/>
                 <Route path='/profilepage' element={<ProfilePage />}/>
+                <Route path='/createannouncement' element={<CreateAnnouncement />}/>               
+                <Route path='/createmodules' element={<CreateModules />}/>
+
 
 
 

@@ -13,7 +13,7 @@ export const SelectMenu = ({label, name}) => {
                     form.setValue(name, e.target.value)
                 }}>
                     <option value='Student'>Student</option>
-                    <option value='Admin'>Admin</option>
+                    <option value='Admin'>Teacher</option>
 
                 </select>
         </label>

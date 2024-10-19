@@ -1,9 +1,15 @@
+import { useNavigate } from "react-router-dom"
 
 
-export default function Modules() {
+export const Modules = () => {
+    const navigate = useNavigate();
+
+    const handleNav = () => {
+        navigate('/createmodules')
+    }
     return (
         <div>
-            <p>Modules</p>
+            <button onClick={handleNav}></button>
         </div>
     )
 }

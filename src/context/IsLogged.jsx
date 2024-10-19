@@ -1,8 +1,10 @@
 import { createContext, useContext, useState } from "react";
+import { useUserInfo } from "./TrackUser";
 
 const isLoggedContext = createContext();
 
 export const LoggedProvider = ({children}) => {
+    const { userInfo, updateUserInfo } = useUserInfo();
     const [ isLogged, setIsLogged ] = useState(false)
 
     const login = () => {
@@ -11,6 +13,9 @@ export const LoggedProvider = ({children}) => {
 
     const logout = () => {
         setIsLogged(false)
+        updateUserInfo(undefined)
+        console.log(userInfo)
+
     }
 
     return (
