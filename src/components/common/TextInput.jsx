@@ -7,7 +7,7 @@ export const TextInput = ({label, name, type = "text"}) => {
     return (
         <label>
             {label}
-            <input type={type} name={name} onChange={(e) => {
+            <input required type={type} name={name} onChange={(e) => {
                 form.setValue(name, e.target.value)
             }}/>
         </label>

@@ -1,20 +1,30 @@
 
-import { createContext } from 'react';
 import { DeleteContent } from './components/common/DeleteContent';
 import { DeleteUsers } from './components/common/deleteUsers';
 import Router from './components/layout/Router';
-
-const LoggedInContext = createContext(false)
+import { LoggedProvider } from './context/IsLogged';
 
 
 function App() {
 
   return (
     <div>
-      <Router />
-      <p>heyo</p>
-      <DeleteContent />
-      <DeleteUsers />
+      <LoggedProvider>
+      <div className='main-container'>
+        <div className='main-view'>
+          <Router />
+        </div>
+          <div className='debug-tools'>
+            <p>Debug Tools</p>
+            <DeleteContent />
+            <DeleteUsers />
+          </div>
+
+        </div>
+
+      </LoggedProvider>
+
+
     </div>
 
   )
