@@ -5,8 +5,8 @@ import { FormProvider } from "../context/FormProvider"
 import { useApi } from "../api/apiV3"
 import { Link, useNavigate } from "react-router-dom"
 import { TextArea } from "../components/common/TextArea"
-import { SelectMenu } from "../components/common/SelectMenu"
 import { NumberInput } from "../components/common/NumberInput"
+import { SelectMenuPub } from "../components/common/SelectMenuPub"
 
 export const CreateModules = () => {
     const [error, setError] = useState();
@@ -17,8 +17,7 @@ export const CreateModules = () => {
     const handleSubmit = async (data) => {
         if(!data.modTitle || 
             !data.modDesc || 
-            !data.modPage ||
-            !data.modPub) {
+            !data.modPage) {
             setError('One or more inputs are empty')
         } else {
             await modApi.create(data)
@@ -30,7 +29,7 @@ export const CreateModules = () => {
     return (
         <div className="create-an box">
             <FormProvider onSubmit={handleSubmit}>
-                <Link to='/announcements'><span>&lt;-- Return to Annoucements</span></Link>
+                <Link to='/modules'><span>&lt;-- Return to Modules</span></Link>
                 <p>{error}</p>
                 <label className="atitle">
                     <p>Title:</p>
@@ -45,7 +44,7 @@ export const CreateModules = () => {
                     <NumberInput name='modPage' />
                 </label>
                 <label className="ms">
-                    <SelectMenu name='modPub' value1='Unpublished' value2='Published' />
+                    <SelectMenuPub name='modPub' />
                 </label>
                 
                 <SubmitButton>Post Module</SubmitButton>
